@@ -223,22 +223,6 @@
     "isDefault" : true,
     "controller" : "File"
   },
-  "appNotification" : {
-    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-    "name" : "appNotification",
-    "owner" : "App",
-    "category" : "wm.NotificationVariable",
-    "dataBinding" : [ {
-      "target" : "class",
-      "value" : "Error",
-      "type" : "list"
-    }, {
-      "target" : "toasterPosition",
-      "value" : "bottom right",
-      "type" : "list"
-    } ],
-    "operation" : "toast"
-  },
   "goToPage_forfbpostprefab" : {
     "_id" : "wm-goToPage_forfbpostprefab-wm.NavigationVariable-1461753627901",
     "name" : "goToPage_forfbpostprefab",
@@ -313,24 +297,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "appNotification": {
-      "_id": "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-      "name": "appNotification",
-      "owner": "App",
-      "category": "wm.NotificationVariable",
-      "dataBinding": [
-        {
-          "target": "class",
-          "value": "Error",
-          "type": "list"
-        },
-        {
-          "target": "toasterPosition",
-          "value": "bottom right",
-          "type": "list"
-        }
-      ],
-      "operation": "toast"
-    }
+  }
 }

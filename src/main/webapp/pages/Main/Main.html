@@ -7,7 +7,10 @@
             <wm-tabs name="tabs1">
                 <wm-tabpane name="tabpane1">
                     <wm-tabheader name="tabheader1" heading="Gmaps"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent1"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.mapsData.dataSet" lat="coords.lat" lng="coords.lng" icon="icon" info="info" shade="color" radius="radius" waypoints="bind:Variables.waypoints.dataSet"
+                        origin="HYDERABAD" destination="KERALA"></wm-prefab>
+                    </wm-tabcontent>
                 </wm-tabpane>
                 <wm-tabpane name="tabpane2">
                     <wm-tabheader name="tabheader2" heading="FBpost"></wm-tabheader>
@@ -15,7 +18,15 @@
                 </wm-tabpane>
                 <wm-tabpane name="tabpane3">
                     <wm-tabheader name="tabheader3" heading="youtube"></wm-tabheader>
-                    <wm-tabcontent name="tabcontent3"></wm-tabcontent>
+                    <wm-tabcontent name="tabcontent3">
+                        <wm-prefab prefabname="youtube" name="youtube1"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5">
+                    <wm-tabheader name="tabheader5" heading="QRCODE"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent5">
+                        <wm-prefab prefabname="QRCode" name="QRCode1"></wm-prefab>
+                    </wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
             <wm-tabs name="tabs1">
@@ -36,14 +47,14 @@
                             <wm-accordionpane name="accordionpane2">
                                 <wm-accordionheader name="accordionheader2" heading="DownloadAsInline"></wm-accordionheader>
                                 <wm-accordioncontent name="accordioncontent2">
-                                    <wm-fileupload name="fileupload3"></wm-fileupload>
+                                    <wm-fileupload name="fileupload3" service="FileService" operation="uploadFile"></wm-fileupload>
                                     <wm-button class="btn-default" caption="Button" type="button" name="button2" on-click="FileServiceGetDownloadFileAsInline"></wm-button>
                                 </wm-accordioncontent>
                             </wm-accordionpane>
                         </wm-accordion>
                         <wm-panel class="panel-primary" name="panel1" title="DeleteFiles">
                             <wm-panel-footer name="panel_footer1"></wm-panel-footer>
-                            <wm-fileupload name="fileupload4"></wm-fileupload>
+                            <wm-fileupload name="fileupload4" service="FileService" operation="uploadFile"></wm-fileupload>
                             <wm-button class="btn-default" caption="Button" type="button" name="button3" on-click="FileServiceDeleteFile"></wm-button>
                         </wm-panel>
                         <wm-panel class="panel-primary" name="panel2" title="Listfiles">
@@ -65,7 +76,7 @@
                             <wm-accordionpane name="accordionpane3">
                                 <wm-accordionheader name="accordionheader3" heading="Select"></wm-accordionheader>
                                 <wm-accordioncontent name="accordioncontent3">
-                                    <wm-fileupload name="fileupload5" caption="Select" mode="Select"></wm-fileupload>
+                                    <wm-fileupload name="fileupload5" caption="Select" mode="Select" service="FileService" operation="uploadFile"></wm-fileupload>
                                     <wm-button class="btn-default" caption="Button" type="button" name="button8" on-click="serviceVariable1"></wm-button>
                                     <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" navigation="None" name="livelist2">
                                         <wm-listtemplate layout="media" name="listtemplate2">
