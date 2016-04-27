@@ -11,6 +11,9 @@
   "name" : "footer",
   "type" : "FOOTER"
 }, {
+  "name" : "forfbpostprefab",
+  "type" : "PARTIAL"
+}, {
   "name" : "header",
   "type" : "HEADER"
 }, {
