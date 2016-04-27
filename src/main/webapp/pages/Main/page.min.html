@@ -44,6 +44,72 @@ var _MainPage_Variables_ ={}
                     <wm-tabcontent name="tabcontent3"></wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1" heading="file_upload"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
+                        <wm-accordion name="accordion1">
+                            <wm-accordionpane name="accordionpane1">
+                                <wm-accordionheader name="accordionheader1" heading="Download"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent1">
+                                    <wm-fileupload name="fileupload2" service="FileService" operation="uploadFile"></wm-fileupload>
+                                    <wm-button class="btn-default" caption="Download" type="button" name="button1" on-click="FileServiceGetDownloadFile"></wm-button>
+                                </wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-accordion name="accordion2">
+                            <wm-accordionpane name="accordionpane2">
+                                <wm-accordionheader name="accordionheader2" heading="DownloadAsInline"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent2">
+                                    <wm-fileupload name="fileupload3"></wm-fileupload>
+                                    <wm-button class="btn-default" caption="Button" type="button" name="button2" on-click="FileServiceGetDownloadFileAsInline"></wm-button>
+                                </wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                        <wm-panel class="panel-primary" name="panel1" title="DeleteFiles">
+                            <wm-panel-footer name="panel_footer1"></wm-panel-footer>
+                            <wm-fileupload name="fileupload4"></wm-fileupload>
+                            <wm-button class="btn-default" caption="Button" type="button" name="button3" on-click="FileServiceDeleteFile"></wm-button>
+                        </wm-panel>
+                        <wm-panel class="panel-primary" name="panel2" title="Listfiles">
+                            <wm-panel-footer name="panel_footer2"></wm-panel-footer>
+                            <wm-button class="btn-default" caption="Button" type="button" name="button4" on-click="FileServiceListFiles"></wm-button>
+                            <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.FileServiceUploadFile.dataSet" navigation="None" name="livelist1">
+                                <wm-listtemplate layout="media" name="listtemplate1">
+                                    <wm-card name="Action Card" picturesource="bind:Variables.FileServiceUploadFile.dataSet.path" picturetitle="bind:Variables.FileServiceUploadFile.dataSet.fileName">
+                                        <wm-card-actions horizontalalign="right" name="card_actions1">
+                                            <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button5"></wm-button>
+                                            <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button6"></wm-button>
+                                            <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button7"></wm-button>
+                                        </wm-card-actions>
+                                    </wm-card>
+                                </wm-listtemplate>
+                            </wm-livelist>
+                        </wm-panel>
+                        <wm-accordion name="accordion3">
+                            <wm-accordionpane name="accordionpane3">
+                                <wm-accordionheader name="accordionheader3" heading="Select"></wm-accordionheader>
+                                <wm-accordioncontent name="accordioncontent3">
+                                    <wm-fileupload name="fileupload5" caption="Select" mode="Select"></wm-fileupload>
+                                    <wm-button class="btn-default" caption="Button" type="button" name="button8" on-click="serviceVariable1"></wm-button>
+                                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" navigation="None" name="livelist2">
+                                        <wm-listtemplate layout="media" name="listtemplate2">
+                                            <wm-card name="Action Card" picturesource="bind:Variables.FileServiceListFiles.dataSet.path" picturetitle="bind:Variables.FileServiceListFiles.dataSet.name">
+                                                <wm-card-actions horizontalalign="right" name="card_actions2">
+                                                    <wm-button iconclass="wi wi-heart" class="btn-transparent" name="button9"></wm-button>
+                                                    <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-bookmark" name="button10"></wm-button>
+                                                    <wm-button class="btn-transparent" caption="" type="button" iconclass="wi wi-share" name="button11"></wm-button>
+                                                </wm-card-actions>
+                                            </wm-card>
+                                        </wm-listtemplate>
+                                    </wm-livelist>
+                                </wm-accordioncontent>
+                            </wm-accordionpane>
+                        </wm-accordion>
+                    </wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
