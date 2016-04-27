@@ -20,6 +20,9 @@
   "name" : "leftnav",
   "type" : "LEFTNAV"
 }, {
+  "name" : "prefab",
+  "type" : "PAGE"
+}, {
   "name" : "rightnav",
   "type" : "RIGHTNAV"
 }, {

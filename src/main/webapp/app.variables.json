@@ -241,6 +241,16 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_prefab" : {
+    "_id" : "wm-goToPage_prefab-wm.NavigationVariable-1461754842874",
+    "name" : "goToPage_prefab",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "prefab",
+    "pageTransitions" : "none"
+  },
   "serviceVariable1" : {
     "_id" : "wm-serviceVariable1-wm.ServiceVariable-1461754140091",
     "name" : "serviceVariable1",

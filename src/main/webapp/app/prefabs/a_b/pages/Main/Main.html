@@ -1,0 +1,159 @@
+<wm-page data-ng-controller="A_bController" name="page1">
+    <wm-view class="container" backgroundcolor="#fff" name="view1">
+        <wm-accordion name="accordion1">
+            <wm-accordionpane name="accordionpane1">
+                <wm-accordionheader name="accordionheader1" heading="SOAP"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent1">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.CIAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo" navigation="Basic" name="grid1">
+                        <wm-grid-column binding="sisoCode" caption="Siso Code" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sPhoneCode" caption="S Phone Code" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sCapitalCity" caption="S Capital City" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sContinentCode" caption="S Continent Code" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sCurrencyISOCode" caption="S Currency I S O Code" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sName" caption="S Name" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                        <wm-grid-column binding="sCountryFlag" caption="S Country Flag" type="string" width="px" readonly="true" pcdisplay="true" mobiledisplay="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane2">
+                <wm-accordionheader name="accordionheader2" heading="GoogleAPI"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent2">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.GoogleapisInvoke.dataSet" navigation="None" name="grid3">
+                        <wm-grid-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.summary" caption="Route Summary" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.bounds.southwest.lng" caption="Route.bounds.southwest Lng" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.bounds.southwest.lat" caption="Route.bounds.southwest Lat" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.bounds.northeast.lng" caption="Route.bounds.northeast Lng" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.bounds.northeast.lat" caption="Route.bounds.northeast Lat" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.leg.duration.text" caption="Route.leg.duration Text" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.leg.duration.value" caption="Route.leg.duration Value" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.leg.distance.text" caption="Route.leg.distance Text" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="route.leg.distance.value" caption="Route.leg.distance Value" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane3">
+                <wm-accordionheader name="accordionheader3" heading="Query"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent3">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.CMExecuteCmQuery.dataSet" navigation="Pager" name="grid4">
+                        <wm-grid-column binding="orderNumber" caption="Order Number" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="requiredDate" caption="Required Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="comments" caption="Comments" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane4">
+                <wm-accordionheader name="accordionheader4" heading="procedure"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent4">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.CMExecuteCmProcce.dataSet" navigation="Basic" name="grid5">
+                        <wm-grid-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="orderDate" caption="Order Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="orderNumber" caption="Order Number" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="comments" caption="Comments" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane5">
+                <wm-accordionheader name="accordionheader5" heading="feed"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent5">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.FeedServiceGetFeed.dataSet" navigation="Basic" name="grid6">
+                        <wm-grid-column binding="author" caption="Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="title" caption="Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="description" caption="Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="feedType" caption="Feed Type" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="link" caption="Link" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="encoding" caption="Encoding" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="entries[0].author" caption="Entries[0] Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="entries[0].title" caption="Entries[0] Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="entries[0].description" caption="Entries[0] Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="entries[0].updatedDate" caption="Entries[0] Updated Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane6">
+                <wm-accordionheader name="accordionheader6" heading="Get"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent6">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.GetAPIInvoke.dataSet" navigation="Classic" name="grid7">
+                        <wm-grid-column binding="balance" caption="Balance" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="_id" caption="_id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="account_number" caption="Account_number" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="nickname" caption="Nickname" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="rewards" caption="Rewards" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="type" caption="Type" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="customer_id" caption="Customer_id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane7">
+                <wm-accordionheader name="accordionheader7" heading="Java"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent7">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.MyJavaServiceTest3.dataSet" navigation="Basic" name="grid8">
+                        <wm-grid-column binding="shippedDate" caption="Shipped Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="orderDate" caption="Order Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="orderNumber" caption="Order Number" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane8">
+                <wm-accordionheader name="accordionheader8" heading="Post"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent8">
+                    <wm-grid readonlygrid="true" dataset="bind:Variables.PostAPIInvoke.dataSet" navigation="Basic" name="grid9">
+                        <wm-grid-column binding="message" caption="Message" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.balance" caption="ObjectCreated Balance" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.account_number" caption="ObjectCreated Account_number" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated._id" caption="ObjectCreated _id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.nickname" caption="ObjectCreated Nickname" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.rewards" caption="ObjectCreated Rewards" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.type" caption="ObjectCreated Type" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="objectCreated.customer_id" caption="ObjectCreated Customer_id" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="code" caption="Code" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                    <wm-composite name="composite1">
+                        <wm-label class="col-md-3 control-label" name="label1" caption="account"></wm-label>
+                        <wm-container class="col-md-9" name="container1">
+                            <wm-text name="text1"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                    <wm-button class="btn-default" caption="Post It" type="button" name="button1" on-click="PostAPIInvoke"></wm-button>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane9">
+                <wm-accordionheader name="accordionheader9" heading="Live"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent9">
+                    <wm-grid readonlygrid="true" title="customers List" dataset="bind:Variables.CMCustomersData.dataSet" navigation="Basic" name="grid9_1">
+                        <wm-grid-column binding="customerNumber" caption="Customer Number" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="customerName" caption="Customer Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="contactLastName" caption="Contact Last Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="contactFirstName" caption="Contact First Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="phone" caption="Phone" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="addressLine1" caption="Address Line1" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="addressLine2" caption="Address Line2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="city" caption="City" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="state" caption="State" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                        <wm-grid-column binding="postalCode" caption="Postal Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" readonly="true"></wm-grid-column>
+                    </wm-grid>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+            <wm-accordionpane name="accordionpane10">
+                <wm-accordionheader name="accordionheader10" heading="Just 4 Change"></wm-accordionheader>
+                <wm-accordioncontent name="accordioncontent10">
+                    <wm-livelist listclass="list-group" itemsperrow="4" template="true" dataset="bind:Variables.CIAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo" navigation="None" name="livelist1">
+                        <wm-listtemplate layout="media" name="listtemplate1">
+                            <wm-card name="Article Card" picturesource="bind:Variables.CIAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo.sCountryFlag">
+                                <wm-card-content name="card_content1">
+                                    <wm-label class="card-title" caption="bind:Variables.CIAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo.sName" name="Title"></wm-label>
+                                    <wm-label name="Description" class="card-text" caption="bind:Variables.CIAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo.sCapitalCity"></wm-label>
+                                </wm-card-content>
+                                <wm-card-actions name="card_actions1">
+                                    <wm-button class="btn-warning" caption="Share" type="button" name="button1"></wm-button>
+                                    <wm-button class="btn-warning" caption="Explore" type="button" name="button2"></wm-button>
+                                </wm-card-actions>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-accordioncontent>
+            </wm-accordionpane>
+        </wm-accordion>
+    </wm-view>
+</wm-page>

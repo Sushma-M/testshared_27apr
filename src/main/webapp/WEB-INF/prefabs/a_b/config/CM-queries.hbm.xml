@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <sql-query name="cmQuery">
+    <![CDATA[
+      select orderNumber,requiredDate,comments from orders
+    ]]>
+  </sql-query>
+  <sql-query name="cmQuery2">
+    <![CDATA[
+      select employeeNumber, firstName, lastName from employees
+    ]]>
+  </sql-query>
+  <sql-query name="cmQueryy">
+    <![CDATA[
+      select orderNumber,requiredDate,comments from orders
+    ]]>
+  </sql-query>
+</hibernate-mapping>

@@ -1,0 +1,95 @@
+{
+  "name" : "CM",
+  "description" : "Procedure for CM",
+  "procedures" : [ {
+    "name" : "cmPro",
+    "procedure" : "call getOrders(:OrderNum)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "OrderNum",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "10100",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "orderNumber",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "orderDate",
+        "subType" : null,
+        "typeRef" : "java.sql.Date",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "status",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "comments",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "CMcmPrortnType",
+      "name" : "CMcmPrortnType"
+    } ]
+  }, {
+    "name" : "cmProcce",
+    "procedure" : "call getOrders(:number)",
+    "comment" : "",
+    "description" : null,
+    "outputType" : null,
+    "returnsSingleResult" : false,
+    "procedureParams" : [ {
+      "paramName" : "number",
+      "procedureParamType" : "IN",
+      "valueType" : "java.lang.Integer",
+      "testValue" : "10100",
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "returnTypeMetadata" : [ {
+      "element" : [ {
+        "name" : "orderNumber",
+        "subType" : null,
+        "typeRef" : "java.lang.Integer",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "orderDate",
+        "subType" : null,
+        "typeRef" : "java.sql.Date",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "status",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      }, {
+        "name" : "comments",
+        "subType" : null,
+        "typeRef" : "java.lang.String",
+        "isList" : false,
+        "allowNull" : null
+      } ],
+      "javaType" : "CMcmProccertnType",
+      "name" : "CMcmProccertnType"
+    } ]
+  } ]
+}
